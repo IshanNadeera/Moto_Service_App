@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MotoServiceAPP</string>
+
+    <string name="splashWelcomeText">WELCOME</string>
+    <string name="copyrightText">copyright©2021</string>
+
+    <string name="addServiceTextView">Add Service</string>
+    <string name="addServiceBookingId">Booking Id</string>
+    <string name="addServiceDate">Date</string>
+    <string name="addServiceProblem">Problem</string>
+    <string name="addServiceRepairCost">Repair Cost</string>
+    <string name="addServiceBikeNumber">Bike Number</string>
+    <string name="addServiceServiceCost">Service Cost</string>
+    <string name="addServiceSaveBtn">Save</string>
 </resources>
