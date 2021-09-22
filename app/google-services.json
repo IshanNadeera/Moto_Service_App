@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "814386801488",
+    "project_id": "motoservice-c08a5",
+    "storage_bucket": "motoservice-c08a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814386801488:android:47a6135451b0d2bdc3da55",
+        "android_client_info": {
+          "package_name": "com.example.motoserviceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814386801488-2vh0v25a9cmo3abrickptrmfsh3lap43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALVbQgwmnGQE6agDoHO60qtS3qoUtJWy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814386801488-2vh0v25a9cmo3abrickptrmfsh3lap43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
