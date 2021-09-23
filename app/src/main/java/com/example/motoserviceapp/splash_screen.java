@@ -33,7 +33,7 @@ public class splash_screen extends AppCompatActivity {
                 super.onAnimationEnd(animation);
                 Toast.makeText(getBaseContext(), "Loaded Successfully", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
-                Intent intent = new Intent(splash_screen.this, add_Services.class);
+                Intent intent = new Intent(splash_screen.this, LogIn.class);
                 startActivity(intent);
 
             }
