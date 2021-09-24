@@ -1,15 +1,33 @@
 <resources>
+    <!--Mobile App Name-->
     <string name="app_name">MotoServiceAPP</string>
+
+    <!--Splash Screen String Values-->
 
     <string name="splashWelcomeText">WELCOME</string>
     <string name="copyrightText">copyright©2021</string>
 
+    <!--Add Services String Values-->
+
     <string name="addServiceTextView">Add Service</string>
-    <string name="addServiceBookingId">Booking Id</string>
-    <string name="addServiceDate">Date</string>
-    <string name="addServiceProblem">Problem</string>
-    <string name="addServiceRepairCost">Repair Cost</string>
-    <string name="addServiceBikeNumber">Bike Number</string>
-    <string name="addServiceServiceCost">Service Cost</string>
+
+    <string name="addServiceBookingId">Booking Id -</string>
+    <string name="addServiceDate">Drop-Off Date -</string>
+    <string name="addServiceProblem">Problem/Service -</string>
+    <string name="addServiceRepairCost">Repair Cost -</string>
+    <string name="addServiceBikeNumber">Bike Number -</string>
+    <string name="addServiceServiceCost">Service Cost -</string>
     <string name="addServiceSaveBtn">Save</string>
+    <string name="serviceDetailsText">Service Details -</string>
+    <string name="editTextBookingId">Booking Id</string>
+    <string name="editTextBikeNumber">Bike Number</string>
+    <string name="editTextProblem">Problem/Service</string>
+    <string name="editTextRepairCost">Repair Cost</string>
+    <string name="editTextServiceCost">Service Cost</string>
+    <string name="editTextServiceDate">Drop-Off Date</string>
+    <string name="totalCostText">Total Cost -</string>
+
+
+
+
 </resources>
