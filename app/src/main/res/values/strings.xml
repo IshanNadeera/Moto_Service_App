@@ -15,20 +15,24 @@
 
     <string name="loginTextView">LOGIN</string>
     <string name="loginBtn">LOGIN</string>
-    <string name="singUpBtn">SINGUP</string>
+    <string name="singUpBtn">New User? SIGNUP</string>
     <string name="loginUsername">User Name</string>
     <string name="loginPassword">Password</string>
     <string name="Uname">UserName</string>
     <string name="Password">password</string>
 
-    <string name="Registration">SingUP</string>
-    <string name="RegBtn">SINGUP</string>
-    <string name="registrationF_name">First Name</string>
-    <string name="registrationL_name">Last Name</string>
-    <string name="registrationMobile">Phone Number</string>
+    <string name="Registration">SIGN UP</string>
+    <string name="RegBtn">SIGNUP</string>
+    <string name="registrationMobile">Phone</string>
     <string name="registrationEmail">E-mail</string>
     <string name="registrationUserNAme">Username</string>
-    <string name="registrationPassword">Password</string>>
+    <string name="registrationPassword">Password</string>
+    <string name="hello_there_welcome_back">Hello there, Welcome Back</string>
+    <string name="name">Name</string>
+    <string name="already_have_an_account_sign_in">Already have an account? sign In</string>>
+    <string name="profile">User Profile</string>
+    <string name="update_profile">Update profile</string>
+    <string name="delete_profile">Delete Profile</string>
 
 
 </resources>
