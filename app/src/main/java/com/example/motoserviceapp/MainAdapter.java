@@ -3,10 +3,12 @@ package com.example.motoserviceapp;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +17,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -67,7 +73,34 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
         });
 
 
+        holder.okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Map<String,Object> map = new HashMap<>();
+                map.put("BikeNo",holder.bikeNo.getText().toString());
+                map.put("BookingId",holder.bookingId.getText().toString());
+
+                FirebaseDatabase.getInstance().getReference().child("approved_services").push()
+                        .setValue(map);
+
+                FirebaseDatabase.getInstance().getReference().child("services")
+                        .child(getRef(position).getKey()).removeValue();
+
+            }
+        });
+
+
+
     }
+
+    TextView bookingId,bikeNo;
+
+    private void insertData(){
+
+
+    }
+
+
 
     @NonNull
     @Override
@@ -95,7 +128,8 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
             cancelBtn = (Button)itemView.findViewById(R.id.cancelBtn);
 
 
-
         }
     }
+
+
 }

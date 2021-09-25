@@ -228,7 +228,7 @@
         android:id="@+id/editTextProblem"
         android:layout_width="230dp"
         android:layout_height="40dp"
-        android:layout_marginStart="27dp"
+        android:layout_marginStart="82dp"
         android:layout_marginLeft="27dp"
         android:background="@drawable/text_box"
         android:ems="10"
@@ -273,7 +273,7 @@
         android:id="@+id/editTextServiceDate"
         android:layout_width="230dp"
         android:layout_height="40dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="110dp"
         android:layout_marginLeft="48dp"
         android:background="@drawable/text_box"
         android:ems="10"
@@ -286,9 +286,11 @@
 
     <TextView
         android:id="@+id/calculatedResult"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
 
