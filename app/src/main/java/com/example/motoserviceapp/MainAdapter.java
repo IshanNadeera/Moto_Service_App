@@ -49,7 +49,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.bikeNo.getContext());
-                builder.setTitle("Are you sure to Cancel your Booking?");
+                builder.setTitle("Are You Sure To Cancel Your Booking?");
                 builder.setMessage("Deleted data can't be undo");
 
                 builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {

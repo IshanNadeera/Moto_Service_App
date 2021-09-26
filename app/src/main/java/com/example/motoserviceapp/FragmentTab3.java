@@ -3,10 +3,15 @@ package com.example.motoserviceapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +19,10 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class FragmentTab3 extends Fragment {
+
+    RecyclerView recyclerView;
+    ProgressAdapter progressAdapter;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +68,31 @@ public class FragmentTab3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab3, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab3, container, false);
+
+        recyclerView = (RecyclerView)view.findViewById(R.id.progressRV);
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+
+        FirebaseRecyclerOptions<ProgressModel> options =
+                new FirebaseRecyclerOptions.Builder<ProgressModel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("progress"), ProgressModel.class)
+                        .build();
+
+        progressAdapter = new ProgressAdapter(options);
+        recyclerView.setAdapter(progressAdapter);
+        return view;
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        progressAdapter.startListening();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        progressAdapter.startListening();
     }
 }

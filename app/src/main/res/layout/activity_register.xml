@@ -106,7 +106,7 @@
             android:background="@drawable/text_box"
             android:ems="10"
             android:hint="@string/RegPasswordEditText"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:padding="12dp"
             android:textSize="16sp" />
 

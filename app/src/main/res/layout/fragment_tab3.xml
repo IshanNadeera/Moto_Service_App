@@ -5,13 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".FragmentTab3">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/progressRV"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is Fragment3"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textColor="@color/black" />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

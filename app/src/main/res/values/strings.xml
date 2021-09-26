@@ -52,6 +52,8 @@
 
     <!-- Menu Strings-->
     <string name="menuHeader">Menu</string>
+
+    <!-- Registration Details Strings-->
     <string name="registrationDetailsTopText">Welcome Back</string>
     <string name="registrationDetailsTopText2">Fill Details to Continue</string>
     <string name="registrationNameTextView">Name</string>
@@ -61,6 +63,41 @@
     <string name="registrationPhoneTextView">Phone</string>
     <string name="registrationPhoneText">Enter Your Phone</string>
 
-    <!-- Registration Details Strings-->
+    <!-- Bike Details Strings-->
+
+    <string name="BikeDetailsText">Bike Details</string>
+    <string name="category">Category</string>
+    <string name="brandName">Brand Name</string>
+    <string name="mileage">Mileage</string>
+    <string name="modelYear">Model Year</string>
+    <string name="ccValue">CC Value</string>
+
+    <!-- Bike Booking Strings-->
+
+    <string name="BikeDetailsCategoryHint">Classic, Sport, etc..</string>
+    <string name="BikeDetailsBrandHint">Honda, Bajaj, etc..</string>
+    <string name="BikeDetailsMileageHint">ex :- 10000km</string>
+    <string name="BikeDetailsModelYearHint">ex:-2009</string>
+    <string name="BikeDetailsCCHint">ex:-150cc</string>
+    <string name="bookingBikeNoText">Bike Number</string>
+    <string name="bookingBikeNoInput">Enter Bike Number</string>
+    <string name="bookingOwnerNameText">Owner Name</string>
+    <string name="bookingOwnerNameInput">Enter Owner Name</string>
+    <string name="bookingNicNoText">NIC Number</string>
+    <string name="bookingNicNoInput">Enter NIC Number</string>
+    <string name="bookingPhoneNoText">Phone</string>
+    <string name="bookingPhoneNoInput">Enter Phone Number</string>
+    <string name="bookingServiceTypeText">Service Type</string>
+    <string name="bookingServiceTypeInput">Full Service, Body Wash</string>
+    <string name="Mention">Problems</string>
+    <string name="BikeDetailsTopName">Bike Details</string>
+    <string name="bookingBtnSave">SAVE</string>
+    <string name="makeBookingDetailsTopName">Make Booking</string>
+
+    <!-- Ratings Strings-->
+
+    <string name="ratingsTopText">Ratings</string>
+
+
 
 </resources>
