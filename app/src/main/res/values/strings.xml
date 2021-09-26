@@ -49,6 +49,11 @@
     <string name="delete_profile">Delete Profile</string>
 
     <string name="delivery_details">Delivery Details</string>
+    <string name="mobile">Mobile</string>
+    <string name="address">Address</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
 
 
 </resources>

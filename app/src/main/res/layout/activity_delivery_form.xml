@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeliveryForm">
+
+    <TextView
+        android:id="@+id/topHeaderBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/menuIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="376dp"
+        android:layout_marginRight="376dp"
+        android:background="@drawable/ic_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/topHeaderBox"
+        app:layout_constraintTop_toTopOf="@+id/topHeaderBox" />
+
+    <TextView
+        android:id="@+id/DeliveryFormView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/delivery_details"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topHeaderBox"
+        app:layout_constraintEnd_toEndOf="@+id/topHeaderBox"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="@+id/topHeaderBox"
+        app:layout_constraintTop_toTopOf="@+id/topHeaderBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topHeaderBox"
+        app:srcCompat="@drawable/delivery"
+        tools:ignore="UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/BookingId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/addServiceBookingId"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BookingId" />
+
+    <TextView
+        android:id="@+id/Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/mobile"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <TextView
+        android:id="@+id/Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/address"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Number" />
+
+    <EditText
+        android:id="@+id/editTextBookingId"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:hint="@string/editTextBookingId"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BookingId"
+        app:layout_constraintStart_toEndOf="@+id/BookingId" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Name"
+        app:layout_constraintStart_toEndOf="@+id/Name" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:hint="@string/phone_number"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Number"
+        app:layout_constraintStart_toEndOf="@+id/Number" />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:hint="@string/address"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Address"
+        app:layout_constraintStart_toEndOf="@+id/Address" />
+
+    <Button
+        android:id="@+id/DeliverySaveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/btn_sample"
+        android:text="@string/addServiceSaveBtn"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.892" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
