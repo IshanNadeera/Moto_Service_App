@@ -14,17 +14,22 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Registration extends AppCompatActivity {
 
-    private TextView Name,Email,phone,userName,Password;
-    private EditText NameInput,EmailInput,InputPhone,userNameInput,passwordInput;
-
-    private FirebaseAuth mAuth;
-    private Object Registration;
+    EditText name,Email,phone,userName,Password,date;
+    Button buttonSave;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        name = (EditText)findViewById(R.id.NameInput);
+        Email = (EditText)findViewById(R.id.EmailInput);
+        phone = (EditText)findViewById(R.id.InputPhone);
+        userName = (EditText)findViewById(R.id.userNameInput);
+        Password = (EditText)findViewById(R.id.passwordInput);
+        buttonSave = (Button) findViewById(R.id.RegistrationBtn);
+
 
         Button btn = findViewById(R.id.RegistrationSignInBtn);
         btn.setOnClickListener(new View.OnClickListener() {

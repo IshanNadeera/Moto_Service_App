@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserProfile">
+    tools:context=".DeliveryDetails">
 
     <TextView
         android:id="@+id/topHeaderBox"
@@ -18,121 +18,110 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-
-    <TextView
-        android:id="@+id/menuIcon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/ic_menu"
-        app:layout_constraintBottom_toBottomOf="@+id/topHeaderBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
-        app:layout_constraintStart_toStartOf="@+id/topHeaderBox"
-        app:layout_constraintTop_toTopOf="@+id/topHeaderBox"
-        app:layout_constraintVertical_bias="0.35" />
-
-
     <TextView
         android:id="@+id/addServiceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="8dp"
-        android:text="@string/profile"
+        android:text="@string/delivery_details"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/topHeaderBox"
         app:layout_constraintEnd_toEndOf="@+id/topHeaderBox"
-        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="@+id/topHeaderBox"
         app:layout_constraintTop_toTopOf="@+id/topHeaderBox"
-        app:layout_constraintVertical_bias="0.363" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/logoImage"
-        android:paddingTop="10dp"
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:paddingTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topHeaderBox"
-        app:srcCompat="@drawable/icon"
+        app:srcCompat="@drawable/location"
         tools:ignore="UnknownIdInLayout" />
 
     <TextView
-        android:id="@+id/Name"
-        android:layout_width="109dp"
-        android:layout_height="26dp"
+        android:id="@+id/pickUp"
+        android:layout_width="164dp"
+        android:layout_height="37dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/name"
+        android:text="Pick-Up Location"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoImage" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/Email"
-        android:layout_width="93dp"
-        android:layout_height="38dp"
+        android:id="@+id/drofOff"
+        android:layout_width="164dp"
+        android:layout_height="37dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/registrationEmail"
+        android:text="Droff Off Location"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Name" />
+        app:layout_constraintTop_toBottomOf="@+id/pickUp" />
 
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="150dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/registrationMobile"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+    <EditText
+        android:id="@+id/pickUpInput"
+        android:layout_width="329dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:paddingStart="40dp"
+        android:paddingLeft="40dp"
+        android:text="Pick-Up Location"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
+        app:layout_constraintTop_toBottomOf="@+id/pickUp"
+        tools:ignore="RtlSymmetry,TextFields" />
 
-    <TextView
-        android:id="@+id/userName"
-        android:layout_width="93dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/registrationUserNAme"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
+    <EditText
+        android:id="@+id/drofOffInput"
+        android:layout_width="329dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:paddingStart="40dp"
+        android:paddingLeft="40dp"
+        android:text="Droff Off Location"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+        app:layout_constraintTop_toBottomOf="@+id/drofOff"
+        tools:ignore="RtlSymmetry,TextFields" />
 
     <Button
-        android:id="@+id/updateBtn"
+        android:id="@+id/saveBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -140,7 +129,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:background="@color/red"
-        android:text="@string/update_profile"
+        android:text="SAVE"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -149,10 +138,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.892" />
+        app:layout_constraintVertical_bias="0.598" />
 
     <Button
-        android:id="@+id/deleteBtn"
+        android:id="@+id/backBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -160,15 +149,16 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:background="@color/red"
-        android:text="@string/delete_profile"
+        android:text="BACK"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintVertical_bias="0.683" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
