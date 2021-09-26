@@ -31,4 +31,24 @@
     <string name="registrationPassword">Password</string>>
 
 
+    <string name="serviceDetailsText">Service Details -</string>
+    <string name="editTextBookingId">Booking Id</string>
+    <string name="editTextBikeNumber">Bike Number</string>
+    <string name="editTextProblem">Problem/Service</string>
+    <string name="editTextRepairCost">Repair Cost</string>
+    <string name="editTextServiceCost">Service Cost</string>
+    <string name="editTextServiceDate">Drop-Off Date</string>
+    <string name="totalCostText">Total Cost -</string>
+
+
+    <string name="hello_there_welcome_back">Hello there, Welcome Back</string>
+    <string name="name">Name</string>
+    <string name="already_have_an_account_sign_in">Already have an account? sign In</string>>
+    <string name="profile">User Profile</string>
+    <string name="update_profile">Update profile</string>
+    <string name="delete_profile">Delete Profile</string>
+
+    <string name="delivery_details">Delivery Details</string>
+
+
 </resources>

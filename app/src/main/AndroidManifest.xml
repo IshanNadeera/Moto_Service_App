@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MotoServiceAPP">
-        <activity android:name=".Registration"></activity>
+        <activity android:name=".UpdateUser"></activity>
+        <activity android:name=".DeliveryDetails" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".Registration" />
         <activity android:name=".LogIn" />
         <activity android:name=".splash_screen">
             <intent-filter>
