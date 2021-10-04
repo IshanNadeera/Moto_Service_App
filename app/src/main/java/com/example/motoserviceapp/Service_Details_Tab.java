@@ -3,7 +3,11 @@ package com.example.motoserviceapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -14,6 +18,8 @@ public class Service_Details_Tab extends AppCompatActivity {
     TabItem tabItem1,tabItem2,tabItem3;
     ViewPager viewPager;
     PageAdapter pageAdapter;
+    TextView menuIcon;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,17 @@ public class Service_Details_Tab extends AppCompatActivity {
         tabItem2 = (TabItem)findViewById(R.id.tab2);
         tabItem3 = (TabItem)findViewById(R.id.tab3);
         viewPager = (ViewPager)findViewById(R.id.viewPager);
+
+        menuIcon = (TextView)findViewById(R.id.menuIcon);
+
+        menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Service_Details_Tab.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         pageAdapter = new PageAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);

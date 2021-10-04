@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -20,6 +21,8 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 public class BikeDetails extends AppCompatActivity {
     EditText category, brand, modelYear, ccAmount, mileage;
     Button btnAdd, btnBack;
+    TextView menuIcon;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,16 @@ public class BikeDetails extends AppCompatActivity {
         mileage = (EditText) findViewById(R.id.mileage);
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnBack = (Button) findViewById(R.id.btnBack);
+
+        menuIcon = (TextView) findViewById(R.id.menuIcon);
+
+        menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BikeDetails.this,MenuActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         btnAdd.setOnClickListener(new View.OnClickListener() {

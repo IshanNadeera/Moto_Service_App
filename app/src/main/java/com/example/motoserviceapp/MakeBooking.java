@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -21,6 +22,7 @@ public class MakeBooking extends AppCompatActivity {
 
     EditText bikeNo,ownerName,ownerNic,phone,serviceType,other;
     Button bookingBtnSave;
+    ImageView menuIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,16 @@ public class MakeBooking extends AppCompatActivity {
         serviceType = (EditText) findViewById(R.id.serviceType);
         other = (EditText) findViewById(R.id.other);
         bookingBtnSave = (Button) findViewById(R.id.bookingBtnSave );
+
+        menuIcon = (ImageView) findViewById(R.id.menuIcon);
+
+        menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MakeBooking.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
 
         bookingBtnSave.setOnClickListener(new View.OnClickListener() {
             @Override

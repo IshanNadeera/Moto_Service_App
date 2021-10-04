@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
@@ -14,6 +15,7 @@ public class Ratings extends AppCompatActivity {
 
     Button button;
     RatingBar ratingStars;
+    TextView menuIcon;
     float myRating=0;
 
     @Override
@@ -23,6 +25,17 @@ public class Ratings extends AppCompatActivity {
 
         button =findViewById(R.id.button);
         ratingStars = findViewById(R.id.ratingBar);
+
+        menuIcon = (TextView)findViewById(R.id.menuIcon);
+
+        menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Ratings.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ratingStars.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {

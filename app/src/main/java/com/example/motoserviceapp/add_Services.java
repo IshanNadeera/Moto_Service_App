@@ -21,7 +21,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 public class add_Services extends AppCompatActivity {
 
     EditText bookingId,bikeNo,problem,repairCost,serviceCost,date;
-    TextView result;
+    TextView result,menuIcon;
     Button buttonSave;
 
 
@@ -38,6 +38,16 @@ public class add_Services extends AppCompatActivity {
         date = (EditText)findViewById(R.id.editTextServiceDate);
         buttonSave = (Button) findViewById(R.id.addServiceSaveBtn);
         result = (TextView) findViewById(R.id.calculatedResult);
+
+        menuIcon = (TextView) findViewById(R.id.menuIcon);
+
+        menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(add_Services.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +70,6 @@ public class add_Services extends AppCompatActivity {
         num = num1 + num2;
 
         result.setText(String.valueOf(num));
-
 
         Map<String,Object> map = new HashMap<>();
         map.put("BookingId",bookingId.getText().toString());

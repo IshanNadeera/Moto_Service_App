@@ -4,7 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.SearchView;
+import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
@@ -13,6 +20,7 @@ public class View_Approved_Bookings extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ApprovedBookingAdapter approvedBookingAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,4 +50,5 @@ public class View_Approved_Bookings extends AppCompatActivity {
         super.onStop();
         approvedBookingAdapter.stopListening();
     }
+
 }

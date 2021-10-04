@@ -14,26 +14,30 @@
         <activity android:name=".Ratings">
 
         </activity>
-        <activity android:name=".MakeBooking"></activity>
+        <activity android:name=".MakeBooking">
+
+        </activity>
         <activity android:name=".BikeDetails" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".Description">
+
+        </activity>
+        <activity android:name=".Registration_Details" />
+        <activity android:name=".Register_Activity" />
+        <activity android:name=".Login_Activity" />
+        <activity android:name=".View_Approved_Bookings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Registration_Details" />
-        <activity android:name=".Register_Activity" />
-        <activity android:name=".Login_Activity" />
-        <activity android:name=".View_Approved_Bookings">
-
-        </activity>
         <activity android:name=".splash_screen" >
 
         </activity>
-        <activity android:name=".add_Services" />
+        <activity android:name=".add_Services" >
+
+        </activity>
         <activity android:name=".Service_Details_Tab">
 
         </activity>
