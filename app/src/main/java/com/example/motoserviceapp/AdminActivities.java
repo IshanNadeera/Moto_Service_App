@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class AdminActivities extends AppCompatActivity {
 
-    private TextView addService, approvedServices, clientView;
+    private TextView addService, approvedServices, clientView, issueBill;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class AdminActivities extends AppCompatActivity {
         addService = findViewById(R.id.adminAddServiceText);
         approvedServices = findViewById(R.id.adminApprovedText);
         clientView = findViewById(R.id.adminClientText);
+        issueBill = findViewById(R.id.adminIssueBillText);
 
         addService.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +39,13 @@ public class AdminActivities extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(AdminActivities.this,MenuActivity.class));
+            }
+        });
+
+        issueBill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminActivities.this,IssueBill.class));
             }
         });
     }

@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private TextView home,myBookings,admin,reviews,share;
+    private TextView home,myBookings,admin,reviews,share,delivery,payment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,8 @@ public class MenuActivity extends AppCompatActivity {
         reviews = findViewById(R.id.menuReviewText);
         admin = findViewById(R.id.menuAdminText);
         share = findViewById(R.id.menuShareText);
+        delivery = findViewById(R.id.menuDeliveryText);
+        payment = findViewById(R.id.menuPaymentsText);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +60,21 @@ public class MenuActivity extends AppCompatActivity {
                 goToFacebookPage("ColorPix.lk");
             }
         });
+
+        delivery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this,DeliveryActivity.class));
+            }
+        });
+
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this,MyCredits.class));
+            }
+        });
+
     }
 
     private void goToFacebookPage(String id){

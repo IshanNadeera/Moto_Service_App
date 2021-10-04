@@ -97,6 +97,7 @@
     <!-- Ratings Strings-->
 
     <string name="ratingsTopText">Ratings</string>
+    <string name="title_activity_delivery_map">Map</string>
 
 
 </resources>
