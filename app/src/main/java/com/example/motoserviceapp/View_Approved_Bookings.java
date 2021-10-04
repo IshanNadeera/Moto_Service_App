@@ -20,6 +20,7 @@ public class View_Approved_Bookings extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ApprovedBookingAdapter approvedBookingAdapter;
+    TextView menuIcon;
 
 
     @Override
@@ -37,6 +38,17 @@ public class View_Approved_Bookings extends AppCompatActivity {
 
         approvedBookingAdapter = new ApprovedBookingAdapter(options);
         recyclerView.setAdapter(approvedBookingAdapter);
+
+        menuIcon = (TextView) findViewById(R.id.menuIcon);
+
+        menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(View_Approved_Bookings.this, AdminActivities.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

@@ -2,23 +2,27 @@ package com.example.motoserviceapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 public class MenuActivity extends AppCompatActivity {
 
-    TextView home,tabView,admin;
+    private TextView home,myBookings,admin,reviews,share;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        TextView home = findViewById(R.id.menuHomeText);
-        TextView tabView = findViewById(R.id.menuTabViewText);
-        TextView admin = findViewById(R.id.menuAdminText);
+        home = findViewById(R.id.menuHomeText);
+        myBookings = findViewById(R.id.menuMyBookingsText);
+        reviews = findViewById(R.id.menuReviewText);
+        admin = findViewById(R.id.menuAdminText);
+        share = findViewById(R.id.menuShareText);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,18 +31,43 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        tabView.setOnClickListener(new View.OnClickListener() {
+        myBookings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MenuActivity.this,Service_Details_Tab.class));
             }
         });
 
+        reviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this,Ratings.class));
+            }
+        });
+
         admin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MenuActivity.this,add_Services.class));
+                startActivity(new Intent(MenuActivity.this,AdminLogin.class));
             }
         });
+
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToFacebookPage("ColorPix.lk");
+            }
+        });
+    }
+
+    private void goToFacebookPage(String id){
+        try{
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/" + id));
+            startActivity(intent);
+        }
+        catch (ActivityNotFoundException e){
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/" + id));
+            startActivity(intent);
+        }
     }
 }

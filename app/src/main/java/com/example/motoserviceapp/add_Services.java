@@ -44,7 +44,7 @@ public class add_Services extends AppCompatActivity {
         menuIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(add_Services.this, MenuActivity.class);
+                Intent intent = new Intent(add_Services.this, AdminActivities.class);
                 startActivity(intent);
             }
         });
